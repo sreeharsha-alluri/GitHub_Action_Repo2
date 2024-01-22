@@ -1,0 +1,16 @@
+name: Second Workflow
+
+on:
+  repository_dispatch:
+    types:
+      - custom-event-name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Your workflow steps for the second repository go here
