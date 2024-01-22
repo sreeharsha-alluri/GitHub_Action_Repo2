@@ -3,7 +3,7 @@ name: Second Workflow
 on:
   repository_dispatch:
     types:
-      - custom-event-name
+      - trigger_automatically
 
 jobs:
   deploy:
