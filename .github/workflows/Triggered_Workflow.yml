@@ -1,9 +1,10 @@
 name: Triggered Workflow
 
 on:
-  repository_dispatch:
+  workflow_run:
+    workflows: ["Main Workflow"]
     types:
-      - trigger_automatically
+      - completed
 
 jobs:
   triggered-job:
