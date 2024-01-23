@@ -1,16 +1,18 @@
-name: Second Workflow
+name: Triggered Workflow
 
 on:
-  repository_dispatch:
-    types:
-      - trigger_automatically
+  workflow_dispatch:
+    inputs:
+      trigger_automatically:
+        description: 'Trigger automatically'
+        required: true
 
 jobs:
-  deploy:
+  triggered-job:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      # Your workflow steps for the second repository go here
+      # Your existing steps go here
