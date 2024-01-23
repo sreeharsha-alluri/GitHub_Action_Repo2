@@ -1,11 +1,9 @@
-name: Triggered Workflow 
+name: Triggered Workflow
 
 on:
-  workflow_dispatch:
-    inputs:
-      trigger_automatically:
-        description: 'Trigger automatically'
-        required: true
+  repository_dispatch:
+    types: 
+      - trigger_automatically
 
 jobs:
   triggered-job:
