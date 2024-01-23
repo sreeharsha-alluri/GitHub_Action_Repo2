@@ -2,7 +2,7 @@ name: Triggered Workflow
 
 on:
   repository_dispatch:
-    types: 
+    types:
       - trigger_automatically
 
 jobs:
