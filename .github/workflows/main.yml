@@ -1,0 +1,16 @@
+name: Triggered Workflow
+
+on:
+  repository_dispatch:
+    types:
+      - trigger_automatically
+
+jobs:
+  triggered-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Your existing steps go here
