@@ -1,4 +1,4 @@
-name: second-workflow
+name: Triggered Workflow
 
 on:
   workflow_dispatch:
